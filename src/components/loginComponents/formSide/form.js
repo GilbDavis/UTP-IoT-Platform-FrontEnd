@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './form.module.scss';
 
-const form = () => {
+const form = ({ handleOnSubmit, handleOnChange, alertMessage }) => {
 
   return (
     <div className={styles.Container}>
@@ -22,11 +22,16 @@ const form = () => {
           </div>
           <div className="left-align">
             <label>
-              <input id="indeterminate-checkbox" type="checkbox" />
+              <input id="indeterminate-checkbox"
+                name="centro_regional"
+                type="checkbox" />
               <span>Recuerdame</span>
             </label>
           </div>
-          <button className="btn waves-effect waves-light" style={{ marginTop: '2em' }} type="submit" name="action">
+          <button className="btn waves-effect waves-light"
+            style={{ marginTop: '2em' }}
+            type="submit"
+            name="action">
             Iniciar Sesión
           </button>
         </form>
