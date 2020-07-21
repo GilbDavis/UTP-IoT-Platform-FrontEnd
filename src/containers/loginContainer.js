@@ -28,12 +28,13 @@ const LoginContainer = (props) => {
     password: "",
     remember: false
   });
-  const { email, password } = user; // Destructuring to get data
+  const { email, password, remember } = user; // Destructuring to get data
 
   const handleOnChange = event => {
     setUser({
       ...user,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
+      remember: event.target.checked
     });
   };
 
@@ -41,7 +42,7 @@ const LoginContainer = (props) => {
     event.preventDefault();
     // Validate data
     if (email.trim() === "" || password.trim() === "") {
-      mostrarAlerta("Todos los campos son obligatorios", "alerta-error");
+      return mostrarAlerta("Todos los campos son obligatorios", "alerta-error");
     }
     // Pass to login handler
     iniciarSesion({ email, password });
@@ -52,6 +53,9 @@ const LoginContainer = (props) => {
       <Form alertMessage={alerta}
         handleOnSubmit={handleOnSubmit}
         handleOnChange={handleOnChange}
+        emailValue={email}
+        passwordValue={password}
+        rememberValue={remember}
       />
       <SideImage />
     </div>

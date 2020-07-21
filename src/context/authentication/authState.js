@@ -51,7 +51,7 @@ const AuthState = props => {
     }
 
     try {
-      const respuesta = await axios.get("/api/usuarios");
+      const respuesta = await axios.get("/api/user");
       dispatch({
         type: OBTENER_USUARIO,
         payload: respuesta.data.data.usuario
@@ -71,10 +71,10 @@ const AuthState = props => {
   // Al iniciar sesion
   const iniciarSesion = async datos => {
     try {
-      const respuesta = await axios.post("/api/usuarios/login", datos);
+      const respuesta = await axios.post("/api/user/login", datos);
       dispatch({
         type: LOGIN_EXITOSO,
-        payload: respuesta.data.data
+        payload: respuesta.data
       });
       usuarioAutenticado();
     } catch (error) {

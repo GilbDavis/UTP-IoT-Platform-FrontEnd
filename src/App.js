@@ -4,6 +4,8 @@ import tokenAuthentication from './config/authToken';
 
 import LoginContainer from './containers/loginContainer';
 import RegisterContainer from './containers/registerContainer';
+import DashboardContainer from './containers/dashboardContainer';
+import PrivateRoute from './components/privateRoute/privateRoute'
 
 import AuthState from './context/authentication/authState';
 import AlertState from './context/alerts/alertState';
@@ -22,6 +24,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={LoginContainer} />
             <Route exact path="/register" component={RegisterContainer} />
+            <PrivateRoute exact path="/dashboard" component={DashboardContainer} />
           </Switch>
         </Router>
       </AlertState>
