@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Alert from '../../alert/alert';
 import styles from './form.module.scss';
 
 const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwordValue, rememberValue }) => {
@@ -9,17 +10,17 @@ const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwo
       <div className={styles.FormContainer}>
         <h4 className={styles.Header}>Internet de las cosas! Impulsando el futuro de la UTP.</h4>
         <p className={styles.Paragraph}>Bienvenido de nuevo, Inicie sesión en su cuenta.</p>
-        {alertMessage ? (<div className={`${styles.alerta} ${styles.alerta_error}`}> {alertMessage.msg} </div>) : null}
+        {alertMessage ? <Alert alert={alertMessage} /> : null}
         <form className={styles.Form + ' center-align'} onSubmit={event => handleOnSubmit(event)}>
           <div className="input-field col s12  l6">
-            <input id="name"
+            <input id="email"
               name="email"
               type="email"
               className="validate"
               onChange={event => handleOnChange(event)}
               value={emailValue}
             />
-            <label htmlFor="name">Correo Eletrónico</label>
+            <label htmlFor="email">Correo Eletrónico</label>
             <span className="helper-text" data-error="Ingrese un correo valido"></span>
           </div>
           <div className="input-field col s12  l6">
@@ -30,7 +31,7 @@ const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwo
               value={passwordValue}
               onChange={event => handleOnChange(event)}
             />
-            <label htmlFor="name">Contraseña</label>
+            <label htmlFor="password">Contraseña</label>
             <span className="helper-text" data-error="Contrasena corta"></span>
           </div>
           <div className="left-align">
