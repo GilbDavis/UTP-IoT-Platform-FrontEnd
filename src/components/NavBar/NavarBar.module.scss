@@ -1,0 +1,21 @@
+.NavBar {
+  padding-left: 260px;
+  width: 100%;
+
+  @media screen and (max-width: 992px) {
+    padding-left: 0;
+  }
+}
+
+.Navigation_Links {
+  padding-right: 260px;
+
+  @media screen and (max-width: 992px) {
+    padding-right: 0;
+  }
+}
+
+.Menu_Li,
+.Menu_Li__Link {
+  padding: 0 1rem;
+}

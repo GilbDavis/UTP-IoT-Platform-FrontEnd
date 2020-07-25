@@ -15,12 +15,13 @@ const LoginContainer = (props) => {
 
   useEffect(() => {
     if (autenticado) { // If the user is already authenticated redirect him to the dashboard
-      props.history.push("/dashboard");
+      props.history.push("/dashboard/datacenter");
     }
 
     if (mensaje) {
       mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
+    // eslint-disable-next-line
   }, [mensaje, autenticado, props.history]);
 
   const [user, setUser] = useState({

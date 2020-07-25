@@ -24,7 +24,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={LoginContainer} />
             <Route exact path="/register" component={RegisterContainer} />
-            <PrivateRoute exact path="/dashboard" component={DashboardContainer} />
+            <PrivateRoute path="/dashboard" component={DashboardContainer} />
           </Switch>
         </Router>
       </AlertState>
