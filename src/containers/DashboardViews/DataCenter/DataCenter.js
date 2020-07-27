@@ -5,7 +5,6 @@ import Temperatures from '../../../components/dashboardComponents/Temperature/Te
 import Humidity from '../../../components/dashboardComponents/Humidity/Humidity';
 import ChartContainer from '../../../components/dashboardComponents/ChartContainer/ChartContainer';
 
-
 const DataCenter = () => {
 
   const [sensorData, setSensorData] = useState({
@@ -18,7 +17,8 @@ const DataCenter = () => {
 
   useEffect(() => {
     const socket = socketIOClient(process.env.REACT_APP_BACKEND_URL);
-    socket.once("DataCenter/room/realTime", data => {
+    socket.on("DataCenter/room/realTime", data => {
+      console.log(data);
       return setSensorData(prevSensorData => ({
         dataCenter: {
           labels: [...prevSensorData.dataCenter.labels, data.createdAt],
@@ -28,18 +28,20 @@ const DataCenter = () => {
       }));
     });
 
-    return () => socket.close();
-  }, [sensorData]);
+    return () => socket.disconnect();
+  }, []);
 
   return (
     <ChartContainer>
       <Temperatures labels={sensorData.dataCenter.labels}
         temperatures={sensorData.dataCenter.temperature}
         screenSize="s12 l6"
+        location="Centro de Datos"
       />
       <Humidity labels={sensorData.dataCenter.labels}
         humidity={sensorData.dataCenter.humidity}
         screenSize="s12 l6"
+        location="Centro de Datos"
       />
     </ChartContainer>
   );

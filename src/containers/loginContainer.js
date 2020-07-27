@@ -11,7 +11,7 @@ const LoginContainer = (props) => {
   const { alerta, mostrarAlerta } = alertContext;
 
   const authContext = useContext(AuthContext);
-  const { mensaje, autenticado, iniciarSesion } = authContext;
+  const { mensaje, autenticado, iniciarSesion, usuario } = authContext;
 
   useEffect(() => {
     if (autenticado) { // If the user is already authenticated redirect him to the dashboard
@@ -19,7 +19,7 @@ const LoginContainer = (props) => {
     }
 
     if (mensaje) {
-      mostrarAlerta(mensaje.msg, mensaje.categoria);
+      return mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
     // eslint-disable-next-line
   }, [mensaje, autenticado, props.history]);
@@ -46,7 +46,7 @@ const LoginContainer = (props) => {
       return mostrarAlerta("Todos los campos son obligatorios", "alerta-error");
     }
     // Pass to login handler
-    iniciarSesion({ email, password });
+    return iniciarSesion({ email, password });
   };
 
   return (

@@ -15,7 +15,7 @@ const Lems = () => {
 
   useEffect(() => {
     const socket = socketIOClient(process.env.REACT_APP_BACKEND_URL);
-    socket.once("LEMS/tina/realTime", data => {
+    socket.on("LEMS/tina/realTime", data => {
       return setLemsData(prevSensorData => ({
         lems: {
           labels: [...prevSensorData.lems.labels, data.createdAt],
@@ -24,14 +24,15 @@ const Lems = () => {
       }));
     });
 
-    return () => socket.close();
-  }, [lemsData]);
+    return () => socket.disconnect();
+  }, []);
 
   return (
     <ChartContainer>
-      <Temperatures screenSize="s12 l12"
+      <Temperatures screenSize="s12 l6"
         labels={lemsData.lems.labels}
         temperatures={lemsData.lems.temperature}
+        location="Laboratorio de Ensayo de Materiales y Suelos"
       />
     </ChartContainer>
   );

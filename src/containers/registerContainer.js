@@ -11,7 +11,7 @@ const RegisterContainer = (props) => {
   const { alerta, mostrarAlerta } = alertContext;
 
   const authContext = useContext(AuthContext);
-  const { mensaje, autenticado, registrarUsuario } = authContext;
+  const { mensaje, autenticado, registrarUsuario, usuario } = authContext;
 
   useEffect(() => {
     if (autenticado) { // If the user is already authenticated redirect him to the dashboard
@@ -22,7 +22,7 @@ const RegisterContainer = (props) => {
       mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
     // eslint-disable-next-line
-  }, [mensaje, autenticado, props.history]);
+  }, [mensaje, autenticado, usuario, props.history]);
 
   const [user, setUser] = useState({
     name: "",
