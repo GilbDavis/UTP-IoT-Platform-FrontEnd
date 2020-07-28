@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Line } from 'react-chartjs-2';
 import pdfConverter from 'jspdf';
 import html2canvas from 'html2canvas'
@@ -50,12 +50,12 @@ const Humidity = ({ screenSize, labels, humidity, location }) => {
     return null;
   } else {
     if (usuario.isAdmin) {
-      adminDownloadChart = <button className="waves-effect waves-light btn"
+      adminDownloadChart = <button className="waves-effect waves-light btn-small"
         style={{ marginTop: '15px' }}
         onClick={e => chartToPdf(e)}
       >
         <i className="material-icons left">cloud_download</i>
-      Descargar grafica
+      Descargar
     </button>
     } else {
       adminDownloadChart = null;

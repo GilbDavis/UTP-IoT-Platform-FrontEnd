@@ -11,7 +11,7 @@ const LoginContainer = (props) => {
   const { alerta, mostrarAlerta } = alertContext;
 
   const authContext = useContext(AuthContext);
-  const { mensaje, autenticado, iniciarSesion, usuario } = authContext;
+  const { mensaje, autenticado, iniciarSesion } = authContext;
 
   useEffect(() => {
     if (autenticado) { // If the user is already authenticated redirect him to the dashboard

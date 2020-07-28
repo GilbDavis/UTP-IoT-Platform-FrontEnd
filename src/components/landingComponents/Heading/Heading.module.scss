@@ -1,0 +1,31 @@
+.Nav_Transparent {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+.Header_Title {
+  font-size: 1.6rem !important;
+  margin-left: 5%;
+
+  @media screen and (max-width: 420px) {
+    width: 60%;
+    // left: 0 !important;
+    // margin-left: 45%;
+  }
+
+  @media screen and (max-width: 383px) {
+    // margin-left: 90%;
+    width: 60%
+  }
+
+  @media screen and (max-width: 320px) {
+    margin-left: 21%;
+    width: 100%
+  }
+}
+
+.Hover_color {
+  &:hover {
+    background-color: #0E0A0A;
+  }
+}

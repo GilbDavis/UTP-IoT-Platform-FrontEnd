@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { Switch } from 'react-router-dom'
 import styles from './dashboardContainer.module.scss';
 

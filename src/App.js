@@ -6,6 +6,7 @@ import LoginContainer from './containers/loginContainer';
 import RegisterContainer from './containers/registerContainer';
 import DashboardContainer from './containers/dashboardContainer';
 import PrivateRoute from './components/privateRoute/privateRoute'
+import LandingPage from './containers/landingPage';
 
 import AuthState from './context/authentication/authState';
 import AlertState from './context/alerts/alertState';
@@ -22,7 +23,8 @@ function App() {
       <AlertState>
         <Router>
           <Switch>
-            <Route exact path="/" component={LoginContainer} />
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/login" component={LoginContainer} />
             <Route exact path="/register" component={RegisterContainer} />
             <PrivateRoute path="/dashboard" component={DashboardContainer} />
           </Switch>
