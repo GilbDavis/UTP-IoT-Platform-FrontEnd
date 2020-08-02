@@ -1,0 +1,55 @@
+.Container {
+  width: 100%;
+  background: #eff1f6;
+}
+
+.Characteristics_Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 1.5em 0 1.7em 0;
+  }
+
+  .Characteristics_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    li {
+      width: 33.333%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 3em;
+      }
+
+      img {
+        width: 35%;
+
+        @media screen and (max-width: 767px) {
+          width: 50%;
+        }
+      }
+
+      h4 {
+        font-size: 1.7rem;
+        text-align: center;
+      }
+    }
+  }
+}
