@@ -1,0 +1,89 @@
+.Responsible_Container {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  background-image: url('../../../assets/team-background.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    background-color: #2b2f3e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  .Responsible_Content_Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      padding: 1.5em 0 1.5em 0;
+      align-self: center;
+      margin: 0;
+      color: #ffffff;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .Profile_Container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      li {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 767px) {
+          width: 90%;
+          margin-bottom: 2em;
+        }
+
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 28%;
+            height: 260px;
+            border-radius: 50%;
+
+            @media screen and (max-width: 1024px) {
+              width: 45%;
+            }
+
+            @media screen and (max-width: 767px) {
+              width: 50%;
+            }
+          }
+        }
+
+
+        blockquote {
+          color: #ffffff;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
