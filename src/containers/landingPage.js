@@ -6,6 +6,7 @@ import SideNav from '../components/landingComponents/SideNav/SideNav';
 import About from '../components/landingComponents/About/About';
 import Characteristics from '../components/landingComponents/Characteristics/Characteristics';
 import Responsibles from '../components/landingComponents/Responsible/Responsible';
+import Footer from '../components/Footer/Footer';
 
 const landingPage = () => {
   return (
@@ -14,8 +15,8 @@ const landingPage = () => {
       <SideNav />
       <Parallax />
       <About />
-      <Characteristics />
       <Responsibles />
+      <Characteristics />
     </div>
   );
 };

@@ -10,17 +10,18 @@ const Characteristics = () => {
     <div className={styles.Container}>
       <div className={styles.Characteristics_Container}>
         <h2>Características</h2>
+        <div className={styles.Heading_Divider}><span></span></div>
         <ul className={styles.Characteristics_list}>
           <li>
-            <img src={analiticsImg} alt="analitic-image" />
+            <img src={analiticsImg} alt="analitic" />
             <h4>Análisis en tiempo real</h4>
           </li>
           <li>
-            <img src={responsiveImg} alt="Responsive-image" />
+            <img src={responsiveImg} alt="Responsive" />
             <h4>Diseño adaptable a cualquier dispositivo</h4>
           </li>
           <li>
-            <img src={intuitiveImg} alt="intuitive-image" />
+            <img src={intuitiveImg} alt="intuitive" />
             <h4>Interfaz intuitiva y fácil navegación</h4>
           </li>
         </ul>

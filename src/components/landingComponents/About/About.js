@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './About.module.scss';
 import { Link } from 'react-router-dom';
 
-import investigationImg from '../../../assets/investigation.svg';
+import investigationImg from '../../../assets/platformback.png';
 
 const About = () => {
   return (
@@ -14,6 +14,7 @@ const About = () => {
 
         <div className={styles.Content_Container}>
           <h3 className={styles.Title}>Bocas IoT Monitoring</h3>
+          <div className={styles.Heading_Divider}><span></span></div>
           <p>
             En el año 2019 el <a href="http://www.investigadores.utp.ac.pa/investigadores/jose.mendoza" rel="noopener noreferrer" target="_blank">Dr. Jose Mendoza </a>
             junto a su equipo de trabajo realizaron la <a href="http://www.investigadores.utp.ac.pa/proyectos/671" target="_blank" rel="noopener noreferrer">investigación</a> inicial que conllevó al desarrollo e implementación de esta plataforma

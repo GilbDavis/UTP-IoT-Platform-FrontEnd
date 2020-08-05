@@ -12,7 +12,21 @@
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 800;
-    margin: 1.5em 0 1.7em 0;
+    margin: 1.5em 0 0 0;
+  }
+
+  .Heading_Divider {
+    border-bottom: 1px solid #FFF;
+    background-color: #DADADA;
+    height: 1px;
+    margin: 1em 0 2em 0;
+
+    & span {
+      display: block;
+      width: 100px;
+      height: 1px;
+      background-color: #F60;
+    }
   }
 
   .Characteristics_list {

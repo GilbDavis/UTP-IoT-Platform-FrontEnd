@@ -10,7 +10,7 @@ const Responsible = () => {
     <div className={styles.Responsible_Container}>
       <div className={styles.Responsible_Content_Container}>
         <h2>Equipo de Trabajo</h2>
-
+        <div className={styles.Heading_Divider}><span></span></div>
         <ul className={styles.Profile_Container}>
           <li>
             <a href="https://github.com/GilbDavis" rel="noopener noreferrer" target="_blank">
@@ -25,7 +25,7 @@ const Responsible = () => {
               <img src={MendozaImg} alt="mendoza-profile-pic" />
             </a>
             <blockquote>
-              Tutor en el desarrollo de tesis
+              Tutor en el Desarrollo de Tésis
             </blockquote>
           </li>
         </ul>
