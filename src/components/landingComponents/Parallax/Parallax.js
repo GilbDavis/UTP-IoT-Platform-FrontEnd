@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Parallax = () => {
   return (
-    <div className={styles.Parallax_Container}>
+    <div id="HomeSection" className={styles.Parallax_Container}>
       <div className={styles.HeaderContainer}>
         <span>UTP Bocas del Toro</span>
         <h1>Plataforma de monitoreo de señales IoT</h1>

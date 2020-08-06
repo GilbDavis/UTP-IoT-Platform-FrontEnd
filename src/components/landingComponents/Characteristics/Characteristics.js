@@ -7,7 +7,7 @@ import intuitiveImg from '../../../assets/intuitiveui.svg';
 
 const Characteristics = () => {
   return (
-    <div className={styles.Container}>
+    <div id="CharacteristicSection" className={styles.Container}>
       <div className={styles.Characteristics_Container}>
         <h2>Características</h2>
         <div className={styles.Heading_Divider}><span></span></div>

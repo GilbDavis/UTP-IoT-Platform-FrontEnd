@@ -6,8 +6,8 @@ import investigationImg from '../../../assets/platformback.png';
 
 const About = () => {
   return (
-    <div>
-      <section className={styles.About_Section} id="AboutSection">
+    <div id="AboutSection">
+      <section className={styles.About_Section}>
         <div>
           <img className={styles.Background_Image} src={investigationImg} alt="platform-background" />
         </div>

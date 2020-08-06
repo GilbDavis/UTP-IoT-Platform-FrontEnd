@@ -7,7 +7,7 @@ import MendozaImg from '../../../assets/mendoza-image.jpg';
 const Responsible = () => {
 
   return (
-    <div className={styles.Responsible_Container}>
+    <div id="ResponsibleSection" className={styles.Responsible_Container}>
       <div className={styles.Responsible_Content_Container}>
         <h2>Equipo de Trabajo</h2>
         <div className={styles.Heading_Divider}><span></span></div>

@@ -1,6 +1,8 @@
 .Nav_Transparent {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
+  z-index: 1000;
+  transition: all .3s ease;
 }
 
 .Header_Title {
@@ -11,6 +13,10 @@
     width: 60%;
     // left: 0 !important;
     // margin-left: 45%;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 53%;
   }
 
   @media screen and (max-width: 383px) {
@@ -26,7 +32,34 @@
 
 .Hover_color {
   text-transform: uppercase;
+
   &:hover {
     background-color: #0E0A0A;
   }
+}
+
+.scrolled {
+  background-color: #ffffff;
+  transition: all .3s ease;
+
+  .Header_Title {
+    color: #000;
+  }
+
+  .Hover_color {
+    color: #000;
+
+    &:hover {
+      background-color: #9F9B97;
+    }
+  }
+
+  .Trigger {
+    color: #000;
+  }
+}
+
+.active {
+  border-bottom: 3px solid #F60;
+  color: #f60 !important;
 }

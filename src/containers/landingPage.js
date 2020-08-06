@@ -17,6 +17,7 @@ const landingPage = () => {
       <About />
       <Responsibles />
       <Characteristics />
+      <Footer />
     </div>
   );
 };
