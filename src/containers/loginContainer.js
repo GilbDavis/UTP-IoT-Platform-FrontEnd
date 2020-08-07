@@ -4,6 +4,7 @@ import styles from './loginContainer.module.scss';
 import Form from '../components/loginComponents/formSide/form';
 import AlertContext from '../context/alerts/alertContext';
 import AuthContext from '../context/authentication/authContext';
+import loginImg from '../assets/login-back.svg';
 
 const LoginContainer = (props) => {
 
@@ -58,7 +59,7 @@ const LoginContainer = (props) => {
         passwordValue={password}
         rememberValue={remember}
       />
-      <SideImage />
+      <SideImage image={loginImg} imageAlt="login-illustration" />
     </div>
   );
 };

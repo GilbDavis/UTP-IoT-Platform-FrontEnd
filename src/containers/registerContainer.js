@@ -4,6 +4,7 @@ import styles from './registerContainer.module.scss';
 import Form from '../components/registerComponents/form/form';
 import AlertContext from '../context/alerts/alertContext';
 import AuthContext from '../context/authentication/authContext';
+import registerImg from '../assets/signup-background.svg';
 
 const RegisterContainer = (props) => {
 
@@ -80,7 +81,10 @@ const RegisterContainer = (props) => {
         handleOnChange={handleOnChange}
         formValues={user}
       />
-      <SideImage />
+      <SideImage
+        image={registerImg}
+        imageAlt="register-illustration"
+      />
     </div>
   );
 };

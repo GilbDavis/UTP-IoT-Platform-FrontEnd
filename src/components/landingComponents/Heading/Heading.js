@@ -28,9 +28,9 @@ const Heading = () => {
         <a data-target="slide-mobile" className={`sidenav-trigger ${styles.Trigger}`}><i className="material-icons">menu</i></a>
         <Link to="/" onClick={() => scroll.scrollToTop()} className={`brand-logo ${styles.Header_Title}`}>Bocas IoT Monitoring</Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down" style={{ marginRight: '5%' }}>
-          <li><ScrollLink to="AboutSection" offset={-60} duration={1000} spy={true} activeClass={styles.active} smooth={true} className={styles.Hover_color}>Acerca de</ScrollLink></li>
-          <li><ScrollLink to="ResponsibleSection" offset={-60} duration={600} spy={true} activeClass={styles.active} smooth={true} className={styles.Hover_color}>Responsables</ScrollLink></li>
-          <li><ScrollLink to="CharacteristicSection" offset={-60} duration={600} spy={true} activeClass={styles.active} smooth={true} className={styles.Hover_color}>Características</ScrollLink></li>
+          <li><ScrollLink to="AboutSection" offset={-60} duration={1000} spy={true} activeClass={styles.active_links} smooth={true} className={styles.Hover_color}>Acerca de</ScrollLink></li>
+          <li><ScrollLink to="ResponsibleSection" offset={-60} duration={600} spy={true} activeClass={styles.active_links} smooth={true} className={styles.Hover_color}>Responsables</ScrollLink></li>
+          <li><ScrollLink to="CharacteristicSection" offset={-60} duration={600} spy={true} activeClass={styles.active_links} smooth={true} className={styles.Hover_color}>Características</ScrollLink></li>
           <li><Link to="/login" className="waves-effect waves-light btn blue">Iniciar Sesión</Link></li>
         </ul>
       </div>

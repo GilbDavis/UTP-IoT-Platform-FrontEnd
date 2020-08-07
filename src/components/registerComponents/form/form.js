@@ -81,7 +81,7 @@ const Form = ({ handleOnChange, handleOnSubmit, formValues, alertMessage, defaul
         </button>
         </form>
 
-        <Link to={"/"} className={styles.Login_Link}>
+        <Link to={"/login"} className={styles.Login_Link}>
           Ya tienes una cuenta? Inicia sesión aqui.
       </Link>
       </div>

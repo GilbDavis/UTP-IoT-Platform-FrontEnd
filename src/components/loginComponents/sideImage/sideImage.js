@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import styles from './sideImage.module.scss';
-import iotBackground from '../../../assets/iot-background.jpg';
 
-const sideImage = () => {
+const sideImage = ({ image, imageAlt }) => {
 
   return (
     <Fragment>
       <div className={styles.SideImage_Container}>
-        <img className={styles.SideImage} src={iotBackground} alt="Background-iot" />
+        <img className={styles.SideImage} src={image} alt={imageAlt} />
       </div>
     </Fragment>
   );
