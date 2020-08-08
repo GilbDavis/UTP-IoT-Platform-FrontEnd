@@ -16,7 +16,7 @@ const PrivateRoute = ({ component: Component, ...props }) => {
 
   return (
     <Route {...props} render={props => !autenticado && !cargando ? (
-      <Redirect to="/" />
+      <Redirect to="/login" />
     ) : (
         <Component {...props} />
       )} />
