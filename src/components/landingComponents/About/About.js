@@ -21,7 +21,7 @@ const About = () => {
             por el estudiante <a href="https://github.com/GilbDavis" rel="noopener noreferrer" target="_blank">Gilberto Davis</a> como proyecto final de culminacion de la Licenciatura en Desarrollo de Software.
           </p>
           <p>
-            La principal ppfunción de la plataforma consiste en monitorear y almacenar la temperatura de la tina de
+            La principal función de la plataforma consiste en monitorear y almacenar la temperatura de la tina de
             curado de hormigón para optimizar el control de calidad adecuado para el óptimo desarrollo del hormigón; y de la temperatura y humedad del cuarto de
             comunicaciones (Centro de Datos) y al mismo tiempo presentandolos en la plataforma en tiempo real.
           </p>

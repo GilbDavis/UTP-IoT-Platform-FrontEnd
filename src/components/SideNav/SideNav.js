@@ -15,10 +15,10 @@ const SideNav = () => {
       </li>
 
       <li><a className="subheader grey-text">Centro de Datos - UTP Bocas</a></li>
-      <li><Link className="white-text" style={{ fontSize: '16px' }} to="/dashboard/datacenter">Temperatura & Humedad</Link></li>
+      <li><Link className="white-text sidenav-close" style={{ fontSize: '16px' }} to="/dashboard/datacenter">Temperatura & Humedad</Link></li>
 
       <li><a className="subheader grey-text">LEMS - UTP Bocas</a></li>
-      <li><Link className="white-text" style={{ fontSize: '16px' }} to="/dashboard/lems">Tina/Temperatura</Link></li>
+      <li><Link className="white-text sidenav-close" style={{ fontSize: '16px' }} to="/dashboard/lems">Tina/Temperatura</Link></li>
     </ul >
   );
 };

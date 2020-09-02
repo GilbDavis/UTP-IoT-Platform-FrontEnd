@@ -25,7 +25,7 @@ const Heading = () => {
   return (
     <nav className={`${styles.Nav_Transparent} ${scrollPosition > 50 ? styles.scrolled : ''}`}>
       <div className="nav-wrapper">
-        <a data-target="slide-mobile" className={`sidenav-trigger ${styles.Trigger}`}><i className="material-icons">menu</i></a>
+        <a data-target="slide-mobile" style={{ cursor: "pointer" }} className={`sidenav-trigger ${styles.Trigger}`}><i className="material-icons">menu</i></a>
         <Link to="/" onClick={() => scroll.scrollToTop()} className={`brand-logo ${styles.Header_Title}`}>Bocas IoT Monitoring</Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down" style={{ marginRight: '5%' }}>
           <li><ScrollLink to="AboutSection" offset={-60} duration={1000} spy={true} activeClass={styles.active_links} smooth={true} className={styles.Hover_color}>Acerca de</ScrollLink></li>

@@ -34,19 +34,7 @@ const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwo
             <label htmlFor="password">Contraseña</label>
             <span className="helper-text" data-error="Contrasena corta"></span>
           </div>
-          <div className="left-align">
-            <label>
-              <input id="indeterminate-checkbox"
-                name="remember"
-                type="checkbox"
-                checked={rememberValue}
-                onChange={event => handleOnChange(event)}
-              />
-              <span>Recuerdame</span>
-            </label>
-          </div>
           <button className="btn waves-effect waves-light"
-            style={{ marginTop: '2em' }}
             type="submit"
             name="action">
             Iniciar Sesión

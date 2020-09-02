@@ -16,7 +16,7 @@ const NavBar = () => {
     <div className={`navbar-fixed ${styles.NavBar}`}>
       <nav className="white">
         <div className="nav-wrapper">
-          <a data-target="slide-out" className="sidenav-trigger"><i className="material-icons black-text">menu</i></a>
+          <a data-target="slide-out" style={{ cursor: 'pointer' }} className="sidenav-trigger"><i className="material-icons black-text">menu</i></a>
           <ul className={`right ${styles.Navigation_Links}`}>
             <li className={styles.Menu_Li}><a onClick={cerrarSesion} className={styles.Menu_Li__Link}><i className="material-icons grey-text" style={{ fontSize: '32px' }}>power_settings_new</i></a></li>
           </ul>
