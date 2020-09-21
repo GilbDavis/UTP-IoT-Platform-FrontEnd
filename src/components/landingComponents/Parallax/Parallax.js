@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Parallax.module.scss';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import reactGa from 'react-ga';
 
 const Parallax = () => {
   return (
@@ -11,7 +12,7 @@ const Parallax = () => {
         <h1>Plataforma de monitoreo de señales IoT</h1>
         <div className={styles.Buttons_Container}>
           <Link to="/login" className={`waves-effect waves-light btn-large  ${styles.Login_link}`}>Ir al sitio</Link>
-          <ScrollLink to="AboutSection" offset={-60} duration={1000} spy={true} smooth={true} className={`waves-effect waves-light btn-large ${styles.know_link}`}>Saber más</ScrollLink>
+          <ScrollLink onClick={() => reactGa.event({ category: 'AboutRedirectionButton', action: 'Clicked the goto About section on landing page' })} to="AboutSection" offset={-60} duration={1000} spy={true} smooth={true} className={`waves-effect waves-light btn-large ${styles.know_link}`}>Saber más</ScrollLink>
         </div>
       </div>
     </div>

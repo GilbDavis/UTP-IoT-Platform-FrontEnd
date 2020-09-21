@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './form.module.scss';
+import reactGa from 'react-ga';
 
 import Select from '../select/select';
 import Alert from '../../alert/alert';
@@ -81,7 +82,7 @@ const Form = ({ handleOnChange, handleOnSubmit, formValues, alertMessage, defaul
         </button>
         </form>
 
-        <Link to={"/login"} className={styles.Login_Link}>
+        <Link onClick={() => reactGa.event({ category: 'LoginRedirectionButton', action: 'Redirected the user to login page' })} to={"/login"} className={styles.Login_Link}>
           Ya tienes una cuenta? Inicia sesión aqui.
       </Link>
       </div>

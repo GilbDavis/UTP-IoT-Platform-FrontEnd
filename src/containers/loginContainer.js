@@ -5,6 +5,7 @@ import Form from '../components/loginComponents/formSide/form';
 import AlertContext from '../context/alerts/alertContext';
 import AuthContext from '../context/authentication/authContext';
 import loginImg from '../assets/login-back.svg';
+import reactGa from 'react-ga';
 
 const LoginContainer = (props) => {
 
@@ -42,6 +43,10 @@ const LoginContainer = (props) => {
 
   const handleOnSubmit = event => {
     event.preventDefault();
+    reactGa.event({
+      category: 'loginButton',
+      action: 'Clicked the button to start a session'
+    });
     // Validate data
     if (email.trim() === "" || password.trim() === "") {
       return mostrarAlerta("Todos los campos son obligatorios", "alerta-error");

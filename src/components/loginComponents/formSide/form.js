@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Alert from '../../alert/alert';
 import styles from './form.module.scss';
+import reactGa from 'react-ga';
 
 const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwordValue, rememberValue }) => {
 
@@ -41,7 +42,7 @@ const form = ({ handleOnSubmit, handleOnChange, alertMessage, emailValue, passwo
           </button>
         </form>
 
-        <Link to={"register"} className={styles.Register_Link}>
+        <Link onClick={() => reactGa.event({ category: 'RegisterRedirectionButton', action: 'Redirected the user to create an account' })} to={"register"} className={styles.Register_Link}>
           No tienes una cuenta aún? Registrate aqui.
         </Link>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './About.module.scss';
 import { Link } from 'react-router-dom';
+import reactGa from 'react-ga';
 
 import investigationImg from '../../../assets/platformback.png';
 
@@ -34,7 +35,7 @@ const About = () => {
             <li>Scss</li>
           </p>
 
-          <Link to="/login" className={`waves-effect waves-light btn-large ${styles.Login_link}`}>Ir a la plataforma</Link>
+          <Link onClick={() => reactGa.event({ category: 'LoginRedirectionButton', action: 'Redirected the user to login page' })} to="/login" className={`waves-effect waves-light btn-large ${styles.Login_link}`}>Ir a la plataforma</Link>
         </div>
       </section>
     </div>

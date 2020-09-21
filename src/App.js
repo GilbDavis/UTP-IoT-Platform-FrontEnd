@@ -1,6 +1,7 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { withRouter, Switch, Route } from 'react-router-dom';
 import tokenAuthentication from './config/authToken';
+import ReactGa from 'react-ga';
 
 import LoginContainer from './containers/loginContainer';
 import RegisterContainer from './containers/registerContainer';
@@ -18,20 +19,23 @@ function App() {
     tokenAuthentication(token);
   }
 
+  useEffect(() => {
+    ReactGa.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, [window.location.pathname]);
+
   return (
     <AuthState>
       <AlertState>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/login" component={LoginContainer} />
-            <Route exact path="/register" component={RegisterContainer} />
-            <PrivateRoute path="/dashboard" component={DashboardContainer} />
-          </Switch>
-        </Router>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={LoginContainer} />
+          <Route exact path="/register" component={RegisterContainer} />
+          <PrivateRoute path="/dashboard" component={DashboardContainer} />
+        </Switch>
       </AlertState>
     </AuthState>
   );
 }
 
-export default App;
+export default withRouter(App);

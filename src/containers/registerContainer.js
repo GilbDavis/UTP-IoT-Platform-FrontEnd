@@ -5,6 +5,7 @@ import Form from '../components/registerComponents/form/form';
 import AlertContext from '../context/alerts/alertContext';
 import AuthContext from '../context/authentication/authContext';
 import registerImg from '../assets/signup-background.svg';
+import reactGa from 'react-ga';
 
 const RegisterContainer = (props) => {
 
@@ -49,6 +50,10 @@ const RegisterContainer = (props) => {
 
   const handleOnSubmit = event => {
     event.preventDefault();
+    reactGa.event({
+      category: 'RegisterButton',
+      action: 'Clicked the button to create an account'
+    });
     // Validate data
     if (name.trim() === "" || lastName.trim() === ""
       || regional_center.trim() === "" || email.trim() === ""
